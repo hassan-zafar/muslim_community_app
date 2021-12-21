@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "570384505161",
+    "project_id": "muslimcare-app",
+    "storage_bucket": "muslimcare-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570384505161:android:e52507ea4665c98664e298",
+        "android_client_info": {
+          "package_name": "com.hassan.windsor_essex_muslim_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570384505161-94jkuppj2430cl95euti2t02nhkmhide.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hassan.windsor_essex_muslim_care",
+            "certificate_hash": "bc0cbf9062896b59c22e63101bb302cef893ef3c"
+          }
+        },
+        {
+          "client_id": "570384505161-sqt69i6dc0rggkitac5bneopvin7kdu2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hassan.windsor_essex_muslim_care",
+            "certificate_hash": "a38e75bc78f57ab76e91317120445129ba6d45ca"
+          }
+        },
+        {
+          "client_id": "570384505161-573i8067dntpq8uft0nr8ugt61nt6l12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQvdN54zrfpL6IXRboIs5fkGiJQiNG6qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570384505161-573i8067dntpq8uft0nr8ugt61nt6l12.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
