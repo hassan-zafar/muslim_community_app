@@ -146,9 +146,7 @@ class _EmailSignUpState extends State<EmailSignUp> {
                         currentStep: _currentStep,
                         onStepCancel: cancel,
                         onStepTapped: tapped,
-                        controlsBuilder: (BuildContext context,
-                            {VoidCallback onStepContinue,
-                            VoidCallback onStepCancel}) {
+                        controlsBuilder: (BuildContext context, _) {
                           return _isComplete
                               ? GestureDetector(
                                   onTap: () {
