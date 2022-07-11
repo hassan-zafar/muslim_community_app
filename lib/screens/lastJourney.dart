@@ -54,7 +54,7 @@ class _LastJourneyState extends State<LastJourney> {
                           SizedBox(
                             height: 50,
                           ),
-                          GlassContainer(
+                          Container(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
@@ -67,7 +67,7 @@ class _LastJourneyState extends State<LastJourney> {
                               ),
                             ),
                           ),
-                          GlassContainer(
+                          Container(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
@@ -85,7 +85,7 @@ class _LastJourneyState extends State<LastJourney> {
                     ),
                   ],
                 ),
-                GlassContainer(
+                Container(
                   child: Column(
                     children: [
                       Text(

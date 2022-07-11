@@ -59,8 +59,8 @@ class _BusinessDetailsState extends State<BusinessDetails> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: GlassContainer(
-                      opacity: 0.3,
+                    child: Container(
+                      
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Stack(
@@ -102,8 +102,8 @@ class _BusinessDetailsState extends State<BusinessDetails> {
 //goodie bag pickup location
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: GlassContainer(
-                      opacity: 0.3,
+                    child: Container(
+                      
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

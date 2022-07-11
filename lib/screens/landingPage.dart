@@ -37,7 +37,7 @@ void showNotification() {
       "How you doin ?",
       NotificationDetails(
           android: AndroidNotificationDetails(
-              channel.id, channel.name, channel.description,
+              channel.id, channel.name,
               importance: Importance.high,
               color: Colors.blue,
               playSound: true,
@@ -81,7 +81,6 @@ class _LandingPageState extends State<LandingPage> {
               android: AndroidNotificationDetails(
                 channel.id,
                 channel.name,
-                channel.description,
                 color: Colors.blue,
                 playSound: true,
                 icon: '@mipmap/ic_launcher',

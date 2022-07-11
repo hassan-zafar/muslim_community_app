@@ -80,7 +80,8 @@ class _AddAnnouncementsState extends State<AddAnnouncements> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: GlassContainer(
+                          child: Container(
+                            
                             child: TextFormField(
                               controller: _titleTextController,
                               validator: (val) => val.trim().length < 3
@@ -98,7 +99,8 @@ class _AddAnnouncementsState extends State<AddAnnouncements> {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: GlassContainer(
+                          child: Container(
+                            
                             child: TextFormField(
                               controller: _descriptionTextController,
                               validator: (val) => val.trim().length < 3
@@ -116,7 +118,8 @@ class _AddAnnouncementsState extends State<AddAnnouncements> {
                         ),
                         GestureDetector(
                           onTap: () => handleSubmit(),
-                          child: GlassContainer(
+                          child: Container(
+                            
                             child: Padding(
                               padding: const EdgeInsets.all(24.0),
                               child: Row(

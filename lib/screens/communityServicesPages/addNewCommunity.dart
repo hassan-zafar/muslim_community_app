@@ -99,8 +99,8 @@ class _AddNewCommunityState extends State<AddNewCommunity> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 18.0, right: 18.0),
-                            child: GlassContainer(
-                              opacity: 0.6,
+                            child: Container(
+                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(
@@ -124,8 +124,8 @@ class _AddNewCommunityState extends State<AddNewCommunity> {
                           // Padding(
                           //   padding:
                           //       const EdgeInsets.only(left: 18.0, right: 18.0),
-                          //   child: GlassContainer(
-                          //     opacity: 0.6,
+                          //   child: Blur(
+                          //     blur: 4,
                           //     child: Padding(
                           //       padding: const EdgeInsets.all(8.0),
                           //       child: TextFormField(
@@ -149,8 +149,8 @@ class _AddNewCommunityState extends State<AddNewCommunity> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 18.0, right: 18.0),
-                            child: GlassContainer(
-                              opacity: 0.6,
+                            child: Container(
+                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(
@@ -176,8 +176,8 @@ class _AddNewCommunityState extends State<AddNewCommunity> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 18.0, right: 18.0),
-                            child: GlassContainer(
-                              opacity: 0.6,
+                            child: Container(
+                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(

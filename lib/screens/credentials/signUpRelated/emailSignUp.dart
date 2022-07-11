@@ -217,7 +217,8 @@ class _EmailSignUpState extends State<EmailSignUp> {
 //Email
                                     Padding(
                                       padding: const EdgeInsets.all(10.0),
-                                      child: GlassContainer(
+                                      child: Container(
+                                        
                                         child: Padding(
                                           padding: const EdgeInsets.only(
                                               left: 8.0, right: 8.0),
@@ -290,7 +291,8 @@ class _EmailSignUpState extends State<EmailSignUp> {
 //Emergency One
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: GlassContainer(
+                                      child: Container(
+                                        
                                         // shape: RoundedRectangleBorder(
                                         //     borderRadius:
                                         //         BorderRadius.all(Radius.circular(8))),
@@ -333,7 +335,8 @@ class _EmailSignUpState extends State<EmailSignUp> {
                                         ? Container()
                                         : Padding(
                                             padding: const EdgeInsets.all(8.0),
-                                            child: GlassContainer(
+                                            child: Container(
+                                              
                                               child: Padding(
                                                 padding: const EdgeInsets.only(
                                                     left: 8.0, right: 8.0),
@@ -374,7 +377,8 @@ class _EmailSignUpState extends State<EmailSignUp> {
                                         ? Container()
                                         : Padding(
                                             padding: const EdgeInsets.all(8.0),
-                                            child: GlassContainer(
+                                            child: Container(
+                                              
                                               child: Padding(
                                                 padding: const EdgeInsets.only(
                                                     left: 8.0, right: 8.0),
@@ -433,7 +437,8 @@ class _EmailSignUpState extends State<EmailSignUp> {
 //location
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: GlassContainer(
+                                      child: Container(
+                                        
                                         child: Padding(
                                           padding: const EdgeInsets.only(
                                               left: 8.0, right: 8.0),
@@ -483,7 +488,8 @@ class _EmailSignUpState extends State<EmailSignUp> {
                                   title(title: "Immigration"),
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: GlassContainer(
+                                    child: Container(
+                                      
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Column(
@@ -529,7 +535,8 @@ class _EmailSignUpState extends State<EmailSignUp> {
 //Questions
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: GlassContainer(
+                                    child: Container(
+                                      
                                       child: Column(
                                         children: [
                                           Padding(
@@ -881,7 +888,8 @@ class TextInputCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: GlassContainer(
+      child: Blur(
+        blur: 4,
         // color: Colors.white,
         // style: NeuomorphicStyle.Flat,
         // opacity: 0.7,

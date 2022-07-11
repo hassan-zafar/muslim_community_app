@@ -3,7 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
-
 import 'package:windsor_essex_muslim_care/config/collection_names.dart';
 import 'package:windsor_essex_muslim_care/constants.dart';
 import 'package:windsor_essex_muslim_care/models/userModel.dart';
@@ -118,7 +117,8 @@ class _UserNSearchState extends State<UserNSearch>
           });
           return Padding(
             padding: const EdgeInsets.all(8.0),
-            child: GlassContainer(
+            child: Container(
+              
               child: ListView(
                 physics: BouncingScrollPhysics(),
                 children: <Widget>[
@@ -132,9 +132,10 @@ class _UserNSearchState extends State<UserNSearch>
                       padding: EdgeInsets.all(8),
                       child: Row(
                         children: [
-                          GlassContainer(
-                            opacity: 0.7,
-                            shadowStrength: 8,
+                          Container(
+                            // opacity: 0.7,
+                            // shadowStrength: 8,
+                            
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
@@ -171,9 +172,10 @@ class _UserNSearchState extends State<UserNSearch>
                                       typeSelected = "admin";
                                     });
                                   },
-                                  child: GlassContainer(
-                                      opacity: 0.7,
-                                      shadowStrength: 8,
+                                  child: Container(
+                                    
+                                      // opacity: 0.7,
+                                      // shadowStrength: 8,
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -222,9 +224,7 @@ class UserResult extends StatelessWidget {
                 )),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: GlassContainer(
-                opacity: 0.6,
-                shadowStrength: 8,
+              child: Container(
                 child: ListTile(
                   leading: CircleAvatar(
                     backgroundColor: Colors.grey,

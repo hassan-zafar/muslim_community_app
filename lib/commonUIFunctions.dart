@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:windsor_essex_muslim_care/screens/credentials/loginRelated/login.dart';
 import 'package:windsor_essex_muslim_care/screens/onBardingPage.dart';
 
@@ -72,10 +71,10 @@ buildSignUpLoginButton(
     textColor = Colors.black}) {
   return Padding(
     padding: const EdgeInsets.all(8),
-    child: GlassContainer(
+    child: Container(
       width: MediaQuery.of(context).size.width * 0.9,
-      //  opacity: 0.6,
-      shadowStrength: 8,
+      //  blur: 4,
+      // shadowStrength: 8,
       // padding: EdgeInsets.all(8),
       // color: color,
       // intensity: 0.35,

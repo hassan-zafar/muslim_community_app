@@ -67,8 +67,8 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                       key: _textFormKey,
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
-                        child: GlassContainer(
-                          opacity: 0.5,
+                        child: Container(
+                          
                           child: TextFormField(
                             controller: _emailController,
                             keyboardType: TextInputType.text,

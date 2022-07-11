@@ -75,9 +75,9 @@ class _AnnouncementsState extends State<Announcements> {
                     },
                     child: _isLoading
                         ? LoadingIndicator()
-                        : GlassContainer(
-                            opacity: 0.6,
-                            shadowStrength: 16,
+                        : Container(
+                            // blur: 4,
+                            // shadowStrength: 16,
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Column(

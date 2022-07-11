@@ -39,8 +39,8 @@ class _UserDetailsPageState extends State<UserDetailsPage> {
   Padding wrappingContainer(Widget buildWidget) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: GlassContainer(
-        opacity: 0.4,
+      child: Container(
+        // opacity: 0.4,
         child: buildWidget,
       ),
     );

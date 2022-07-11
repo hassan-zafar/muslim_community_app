@@ -60,8 +60,7 @@ class _AllBusinessesPageState extends State<AllBusinessesPage> {
               imageUrl: imageLink,
               location: location,
             )),
-        child: GlassContainer(
-          opacity: 0.5,
+        child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

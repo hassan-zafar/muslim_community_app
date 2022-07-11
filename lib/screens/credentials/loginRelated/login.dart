@@ -55,8 +55,8 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 10,
                         ),
-                        GlassContainer(
-                          opacity: 0.5,
+                        Container(
+                          
                           child: Padding(
                             padding: const EdgeInsets.only(left: 12.0),
                             child: TextFormField(
@@ -89,8 +89,8 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 10,
                         ),
-                        GlassContainer(
-                          opacity: 0.5,
+                        Container(
+                          
                           child: Padding(
                             padding: const EdgeInsets.only(
                               left: 12.0,
@@ -141,7 +141,7 @@ class _LoginPageState extends State<LoginPage> {
                                 MaterialPageRoute(
                                     builder: (context) =>
                                         ForgetPasswordPage())),
-                            child: GlassContainer(
+                            child: Container(
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Hero(

@@ -3,7 +3,6 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:image/image.dart' as Im;
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
@@ -100,8 +99,8 @@ class _AddNewBusinessState extends State<AddNewBusiness> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 18.0, right: 18.0),
-                            child: GlassContainer(
-                              opacity: 0.6,
+                            child: Container(
+                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(
@@ -125,8 +124,8 @@ class _AddNewBusinessState extends State<AddNewBusiness> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 18.0, right: 18.0),
-                            child: GlassContainer(
-                              opacity: 0.6,
+                            child: Container(
+                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(
@@ -150,8 +149,8 @@ class _AddNewBusinessState extends State<AddNewBusiness> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 18.0, right: 18.0),
-                            child: GlassContainer(
-                              opacity: 0.6,
+                            child: Container(
+                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(
@@ -177,8 +176,8 @@ class _AddNewBusinessState extends State<AddNewBusiness> {
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 18.0, right: 18.0),
-                            child: GlassContainer(
-                              opacity: 0.6,
+                            child: Container(
+                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(

@@ -61,34 +61,37 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          bottomNavigationBar: GlassContainer(
-            opacity: 0.2,
+          bottomNavigationBar: Blur(
             blur: 8,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
-            ),
-            child: BottomNavigationBar(
-              backgroundColor: Color(0x00ffffff),
-              currentIndex: pageIndex,
-              onTap: onTap,
-              elevation: 0,
-              showUnselectedLabels: false,
-              unselectedItemColor: Colors.black,
-              selectedItemColor: Colors.white,
-              items: [
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.shopping_basket_outlined),
-                  label: "businesses",
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
                 ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.ac_unit), label: "qibla Directions"),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.ac_unit), label: "Islamic Schools"),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.local_pharmacy_rounded),
-                    label: "Prayer Timings")
-              ],
+              ),
+              child: BottomNavigationBar(
+                backgroundColor: Color(0x00ffffff),
+                currentIndex: pageIndex,
+                onTap: onTap,
+                elevation: 0,
+                showUnselectedLabels: false,
+                unselectedItemColor: Colors.black,
+                selectedItemColor: Colors.white,
+                items: [
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.shopping_basket_outlined),
+                    label: "businesses",
+                  ),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.ac_unit), label: "qibla Directions"),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.ac_unit), label: "Islamic Schools"),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.local_pharmacy_rounded),
+                      label: "Prayer Timings")
+                ],
+              ),
             ),
           ),
 // Row(
@@ -105,7 +108,7 @@ class _HomePageState extends State<HomePage> {
 //                     ],
 //                   ),
 
-          // bottomNavigationBar: GlassContainer(
+          // bottomNavigationBar: Blur(
           //   opacity: 1,
           //   blur: 8,
           //   child: FloatingNavBar(

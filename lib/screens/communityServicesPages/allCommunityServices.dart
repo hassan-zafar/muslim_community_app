@@ -79,10 +79,10 @@ class _AllCommunityServicesPageState extends State<AllCommunityServicesPage> {
             },
             elevation: 0,
             backgroundColor: Colors.transparent,
-            label: GlassContainer(
-              opacity: 0.1,
-              borderRadius: BorderRadius.circular(30),
-              blur: 12,
+            label: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
@@ -191,8 +191,7 @@ class _AllCommunityServicesPageState extends State<AllCommunityServicesPage> {
             communityModel: communityModel,
           ),
         ).then((value) => getCommunities()),
-        child: GlassContainer(
-          opacity: 0.5,
+        child: Container(
           height: 215,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

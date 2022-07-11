@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:windsor_essex_muslim_care/config/collection_names.dart';
 import 'package:windsor_essex_muslim_care/constants.dart';
 import 'package:windsor_essex_muslim_care/screens/businessPages/addNewBusiness.dart';
@@ -80,10 +79,10 @@ class _AllBusinessesPageState extends State<AllBusinessesPage> {
             },
             elevation: 0,
             backgroundColor: Colors.transparent,
-            label: GlassContainer(
-              opacity: 0.1,
-              borderRadius: BorderRadius.circular(30),
-              blur: 12,
+            label: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
@@ -191,56 +190,55 @@ class _AllBusinessesPageState extends State<AllBusinessesPage> {
             businessModel: businessModel,
           ),
         ).then((value) => getBusinesses()),
-        child: GlassContainer(
-          opacity: 0.5,
-          height: 215,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Hero(
-                tag: imageLink,
-                child: Container(
-                  height: 120,
-                  width: 350,
-                  child: CachedNetworkImage(
-                    height: 100,
-                    imageUrl: imageLink,
-                    placeholder: (context, url) =>
-                        Center(child: CircularProgressIndicator()),
-                    errorWidget: (context, url, error) => Icon(Icons.error),
-                    fit: BoxFit.cover,
+        child: Container(
+          child: Container(
+            height: 215,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Hero(
+                  tag: imageLink,
+                  child: Container(
+                    height: 120,
+                    width: 350,
+                    child: CachedNetworkImage(
+                      height: 100,
+                      imageUrl: imageLink,
+                      placeholder: (context, url) =>
+                          Center(child: CircularProgressIndicator()),
+                      errorWidget: (context, url, error) => Icon(Icons.error),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Hero(
-                      tag: businessName,
-                      child: Text(
-                        businessName,
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Hero(
+                        tag: businessName,
+                        child: Text(
+                          businessName,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0, bottom: 12),
-                    child: Text(
-                      "Location: $location",
-                      style: TextStyle(fontWeight: FontWeight.w300),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0, bottom: 12),
+                      child: Text(
+                        "Location: $location",
+                        style: TextStyle(fontWeight: FontWeight.w300),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
-
-
 }
