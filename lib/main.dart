@@ -79,7 +79,7 @@ class MyApp extends StatelessWidget {
         centered: true,
         backgroundColor: Color(0xff96B7BF),
         //Color(0xff387A53),
-        nextScreen: userUid != "" ? LandingPage() : LoginPage(),
+        nextScreen: LandingPage(),
         duration: 1,
         splashTransition: SplashTransition.fadeTransition,
       ),

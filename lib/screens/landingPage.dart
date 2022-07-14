@@ -36,8 +36,7 @@ void showNotification() {
       "Testing ",
       "How you doin ?",
       NotificationDetails(
-          android: AndroidNotificationDetails(
-              channel.id, channel.name,
+          android: AndroidNotificationDetails(channel.id, channel.name,
               importance: Importance.high,
               color: Colors.blue,
               playSound: true,
@@ -175,7 +174,9 @@ class _LandingPageState extends State<LandingPage> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Get.to(() => AllBusinessesPage());
+                              Get.to(() => userUid != ""
+                                  ? LoginPage()
+                                  : AllBusinessesPage());
                             },
                             child: EditedNeuomprphicContainer(
                               icon: shop,
@@ -185,13 +186,15 @@ class _LandingPageState extends State<LandingPage> {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () =>
-                                Get.to(() => AllCommunityServicesPage()),
+                            onTap: () => Get.to(() => userUid != ""
+                                ? LoginPage()
+                                : AllCommunityServicesPage()),
                             child: EditedNeuomprphicContainer(
                               icon: communityIcon,
                               text: "Community Services",
                             ),
-                          ),  GestureDetector(
+                          ),
+                          GestureDetector(
                             onTap: () {
                               Get.to(() => QiblahCompass());
                             },
@@ -200,7 +203,6 @@ class _LandingPageState extends State<LandingPage> {
                               text: "Kaaba Directions",
                             ),
                           ),
-                      
                         ],
                       ),
                       Row(
@@ -215,8 +217,9 @@ class _LandingPageState extends State<LandingPage> {
                               isLanding: true,
                             ),
                           ),
-                            GestureDetector(
-                            onTap: () => Get.to(() => HifzProgram()),
+                          GestureDetector(
+                            onTap: () => Get.to(() =>
+                                userUid != "" ? LoginPage() : HifzProgram()),
                             child: EditedNeuomprphicContainer(
                               icon: hifzProgram,
                               text: "Hifz Program",
