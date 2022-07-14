@@ -1,7 +1,6 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:windsor_essex_muslim_care/commonUIFunctions.dart';
 import 'package:windsor_essex_muslim_care/constants.dart';
 import 'package:windsor_essex_muslim_care/services/authentication_service.dart';

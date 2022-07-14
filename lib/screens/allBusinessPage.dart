@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:windsor_essex_muslim_care/screens/productDetails.dart';
 
 import '../constants.dart';

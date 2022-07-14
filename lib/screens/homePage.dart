@@ -1,14 +1,12 @@
-import 'package:floating_navbar/floating_navbar.dart';
-import 'package:floating_navbar/floating_navbar_item.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:windsor_essex_muslim_care/screens/allBusinessPage.dart';
 import 'package:windsor_essex_muslim_care/screens/islamicSchools.dart';
 import 'package:windsor_essex_muslim_care/screens/prayerTimings.dart';
 import 'package:windsor_essex_muslim_care/screens/qiblaPage.dart';
 
 import '../constants.dart';
+import '../tools/glassmorphism/src/blur.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -61,37 +59,34 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          bottomNavigationBar: Blur(
-            blur: 8,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
+          bottomNavigationBar: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
+            ),
+            child: BottomNavigationBar(
+              backgroundColor: Color(0x00ffffff),
+              currentIndex: pageIndex,
+              onTap: onTap,
+              elevation: 0,
+              showUnselectedLabels: false,
+              unselectedItemColor: Colors.black,
+              selectedItemColor: Colors.white,
+              items: [
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.shopping_basket_outlined),
+                  label: "businesses",
                 ),
-              ),
-              child: BottomNavigationBar(
-                backgroundColor: Color(0x00ffffff),
-                currentIndex: pageIndex,
-                onTap: onTap,
-                elevation: 0,
-                showUnselectedLabels: false,
-                unselectedItemColor: Colors.black,
-                selectedItemColor: Colors.white,
-                items: [
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.shopping_basket_outlined),
-                    label: "businesses",
-                  ),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.ac_unit), label: "qibla Directions"),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.ac_unit), label: "Islamic Schools"),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.local_pharmacy_rounded),
-                      label: "Prayer Timings")
-                ],
-              ),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.ac_unit), label: "qibla Directions"),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.ac_unit), label: "Islamic Schools"),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.local_pharmacy_rounded),
+                    label: "Prayer Timings")
+              ],
             ),
           ),
 // Row(

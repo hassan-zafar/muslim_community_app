@@ -3,8 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
-
 import 'package:uuid/uuid.dart';
 import 'package:windsor_essex_muslim_care/commonUIFunctions.dart';
 import 'package:windsor_essex_muslim_care/constants.dart';
@@ -888,8 +886,8 @@ class TextInputCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: Blur(
-        blur: 4,
+      child: Container(
+      
         // color: Colors.white,
         // style: NeuomorphicStyle.Flat,
         // opacity: 0.7,

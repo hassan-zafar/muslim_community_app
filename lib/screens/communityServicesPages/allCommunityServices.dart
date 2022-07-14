@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:windsor_essex_muslim_care/config/collection_names.dart';
 import 'package:windsor_essex_muslim_care/constants.dart';
 import 'package:windsor_essex_muslim_care/models/communityServiceModel.dart';
