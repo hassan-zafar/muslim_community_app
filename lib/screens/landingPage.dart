@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
@@ -29,7 +28,7 @@ String email;
 String token;
 List<UserModel> allUsersList = [];
 
-bool isAdmin;
+bool isAdmin = false;
 void showNotification() {
   flutterLocalNotificationsPlugin.show(
       0,
@@ -67,7 +66,9 @@ class _LandingPageState extends State<LandingPage> {
   @override
   void initState() {
     super.initState();
-    isAdmin ? getAllUsers() : null;
+    if (isAdmin) {
+      getAllUsers();
+    }
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       RemoteNotification notification = message.notification;
       AndroidNotification android = message.notification?.android;
@@ -219,25 +220,31 @@ class _LandingPageState extends State<LandingPage> {
                           ),
                           GestureDetector(
                             onTap: () => Get.to(() =>
-                                userUid != "" ? LoginPage() : HifzProgram()),
+                                userUid == "" ? LoginPage() : HifzProgram()),
                             child: EditedNeuomprphicContainer(
-                              icon: hifzProgram,
-                              text: "Hifz Program",
+                              icon: userUid == null && userUid == ""
+                                  ? memberModule
+                                  : hifzProgram,
+                              text: userUid == null && userUid == ""
+                                  ? "Become a Member"
+                                  : "Hifz Program",
                               isImage: true,
                               isLanding: true,
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              AuthenticationService().signOut();
-                              UserLocalData().logOut();
-                              Get.off(() => LoginPage());
-                            },
-                            child: EditedNeuomprphicContainer(
-                              icon: logoutIcon,
-                              text: "Log Out",
-                            ),
-                          ),
+                          userUid != null && userUid != ""
+                              ? GestureDetector(
+                                  onTap: () {
+                                    AuthenticationService().signOut();
+                                    UserLocalData().logOut();
+                                    Get.off(() => LoginPage());
+                                  },
+                                  child: EditedNeuomprphicContainer(
+                                    icon: logoutIcon,
+                                    text: "Log Out",
+                                  ),
+                                )
+                              : SizedBox(),
                         ],
                       ),
 

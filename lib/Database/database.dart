@@ -108,11 +108,14 @@ class DatabaseMethods {
 
     UserModel currentUser = UserModel.fromDocument(_user);
     UserLocalData().setUserUID(currentUser.androidNotificationToken);
-
     UserLocalData().setUserUID(currentUser.userId);
     UserLocalData().setUserEmail(currentUser.email);
     UserLocalData().setIsAdmin(currentUser.isAdmin);
     isAdmin = currentUser.isAdmin;
+    userUid = UserLocalData().getUserUIDGet();
+    email = UserLocalData().getUserEmail();
+    isAdmin = UserLocalData().getIsAdmin();
+    token = UserLocalData().getUserToken();
     return currentUser;
     // UserLocalData().setUserModelData(_userDataString);
   }

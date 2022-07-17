@@ -13,6 +13,7 @@ String mosqueBackGround = "assets/images/mosqueBackground.jpg";
 String loginIcon = "assets/images/logIn.svg";
 String signUp = "assets/images/signUp.svg";
 String hifzProgram = "assets/images/hifzProgram.png";
+String memberModule = "assets/images/member_module.png";
 String lastJourney = "assets/images/corpse.svg";
 String shop = "assets/images/business.png";
 String googleLogo = "assets/images/google.png";

@@ -1,5 +1,6 @@
 import 'package:get_storage/get_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:windsor_essex_muslim_care/screens/landingPage.dart';
 
 class UserLocalData {
   String s = 'sd';
@@ -10,7 +11,14 @@ class UserLocalData {
 
   // Future<bool> logOut() => _preferences.clear();
 
-  Future logOut() => getStorageProference.erase();
+  Future logOut() {
+    userUid = '';
+    email = '';
+    isAdmin = false;
+    token = '';
+    getStorageProference.erase();
+  }
+
   final _userModelString = 'USERMODELSTRING';
   final _uidKey = 'UIDKEY';
   final _isLoggedIn = "ISLOGGEDIN";
@@ -62,7 +70,7 @@ class UserLocalData {
   //
   // Getters
   //
-  bool getIsAdmin() => getStorageProference.read(_isAdmin);
+  bool getIsAdmin() => getStorageProference.read(_isAdmin) ?? false;
   String getUserToken() => getStorageProference.read(_token) ?? '';
 
   String getUserModelData() => _preferences.getString(_userModelString) ?? '';
